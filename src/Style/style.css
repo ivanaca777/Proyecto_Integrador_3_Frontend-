@@ -9,24 +9,14 @@ body {
   header {
     text-align: center;
   }
-  header .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
   header .cart-modal {
     background-color: rgb(145, 194, 206);
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    margin-left: 60%;
+    margin-left: 50%;
     position: absolute;
     align-items: center;
-    z-index: 1000;
   }
   header .cart-modal .carritoheader {
     display: flex;
@@ -46,7 +36,7 @@ body {
     background-color: #a439c2;
     width: 100%;
     height: 30px;
-    margin: 10px 0 0 0;
+    margin: 0;
     font-size: 26px;
   }
   header .cart-modal .cart-item {
@@ -60,7 +50,7 @@ body {
     justify-content: center;
   }
   header .cart-modal .cart-item img {
-    width: 30%;
+    width: 45%;
   }
   header .cart-modal .cart-item div {
     width: 40%;
@@ -160,15 +150,6 @@ body {
     margin-bottom: 90px;
     text-align: center;
   }
-  header .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
   header .cart-modal {
     background-color: rgb(145, 194, 206);
     width: 40%;
@@ -177,7 +158,6 @@ body {
     margin-left: 60%;
     position: absolute;
     align-items: center;
-    z-index: 1000;
   }
   header .cart-modal .carritoheader {
     display: flex;
@@ -210,7 +190,7 @@ body {
     justify-content: center;
   }
   header .cart-modal .cart-item img {
-    height: 100%;
+    width: 45%;
   }
   header .cart-modal .cart-item div {
     width: 40%;
@@ -351,7 +331,7 @@ footer a {
     box-shadow: 0 5px 15px black;
   }
   section article img {
-    width: 40%;
+    width: 30%;
     margin: 5% 3% 5% 5%;
     border-radius: 10px;
   }
@@ -359,7 +339,7 @@ footer a {
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 120%;
+    height: 100%;
     text-align: center;
     align-items: center;
   }
@@ -396,71 +376,72 @@ footer a {
     align-items: center;
     color: white;
     padding: 6px 0 3px 0;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 0 0 5px 5px;
     box-shadow: 0 2px 7PX black;
     letter-spacing: 2px;
   }
-  main {
+  .principalh {
     margin: 10%;
+    background-color: red;
   }
-  main h2 {
+  .principalh main {
+    margin: 0px;
+  }
+  .principalh h2 {
     font-family: "Bitter", serif;
   }
-  main p {
+  .principalh p {
     font-family: "Inter", sans-serif;
   }
-  main form {
+  .principalh form {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  main form label input {
+  .principalh form label input {
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
-  main form label .descripcion {
+  .principalh form label .descripcion {
     height: 90px;
     width: 100%;
   }
-  main form label select {
+  .principalh form label select {
     width: 50%;
     margin-top: 5px;
   }
-  main form label select option {
+  .principalh form label select option {
     background-color: rgb(213, 223, 223);
     font-size: 16px;
   }
-  main form .escala {
+  .principalh form .escala {
     display: flex;
     flex-direction: row;
   }
-  main form .escala label {
+  .principalh form .escala label {
     width: 5%;
     margin: 0 0 0 10%;
     padding: 0;
   }
-  main form .escala .radio {
+  .principalh form .escala .radio {
     width: 5%;
     margin: 0 0 0 20px;
   }
-  main form div {
+  .principalh form div {
     color: red;
   }
-  main form .enviar {
+  .principalh form .enviar {
     width: 20%;
     margin-left: 40%;
   }
-  main form .agregar {
+  .principalh form .agregar {
     width: 100px;
     margin-left: 40%;
     margin-top: 20px;
   }
   .principaln {
     margin-bottom: 20%;
-  }
-  .principalh main {
-    margin: 10%;
   }
 }
 @media (min-width: 721px) {
@@ -531,66 +512,69 @@ footer a {
     box-shadow: 0 2px 7PX black;
     letter-spacing: 2px;
   }
-  main h2 {
+  .principalh {
+    margin-top: 130px;
+    margin-bottom: 20%;
+  }
+  .principalh h2 {
     font-family: "Bitter", serif;
     text-align: center;
     font-size: 32px;
   }
-  main form {
+  .principalh form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  main form label {
+  .principalh form label {
     width: 400px;
   }
-  main form label input {
+  .principalh form label input {
     width: 400px;
     display: flex;
     justify-content: flex-end;
   }
-  main form label .descripcion {
+  .principalh form label .descripcion {
     height: 150px;
     width: 100%;
   }
-  main form label select {
+  .principalh form label select {
     width: 50%;
     margin-top: 5px;
   }
-  main form label select option {
+  .principalh form label select option {
     background-color: rgb(213, 223, 223);
     font-size: 16px;
   }
-  main form .escala {
+  .principalh form .escala {
     display: flex;
     flex-direction: row;
   }
-  main form .escala label {
+  .principalh form .escala label {
     width: 5%;
     margin: 0 0 0 50px;
     padding: 0;
   }
-  main form .escala .radio {
+  .principalh form .escala .radio {
     width: 5%;
     margin: 0 0 0 12px;
   }
-  main form div {
+  .principalh form div {
     color: red;
     text-align: center;
     margin: 0;
     width: 100%;
   }
-  main form .enviar {
+  .principalh form .enviar {
     width: 130px;
     margin-top: 20px;
   }
-  main form .agregar {
+  .principalh form .agregar {
     width: 130px;
     margin-top: 20px;
   }
   .principalc {
-    margin-top: 150px;
     margin-bottom: 5%;
   }
   .principalc p {
@@ -599,11 +583,7 @@ footer a {
     margin: 0 0 50px 25%;
   }
   .principala {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
   }
   .principala p {
     width: 50%;
@@ -611,7 +591,6 @@ footer a {
     margin: 0 0 50px 25%;
   }
   .principaln {
-    margin-top: 150px;
     margin-bottom: 20%;
   }
   .principaln p {
@@ -619,9 +598,4 @@ footer a {
     font-family: "Inter", sans-serif;
     margin: 0 0 50px 20%;
   }
-  .principalh {
-    margin: 150px 0 300px 0;
-  }
-}
-
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=style.css.map */

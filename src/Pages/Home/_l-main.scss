@@ -1,0 +1,222 @@
+@charset'UTF-8';
+
+@import '../../Style/cards.scss';
+
+@media (max-width: 720px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        & article {
+            @include card;
+        }
+    }
+    
+    main {  
+        margin: 10%;
+        & h2 {
+            font-family: 'Bitter', serif;
+        }
+    
+        & p {
+            font-family: 'Inter', sans-serif;;
+        }
+    
+        & form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            & label {
+    
+                & input {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+    
+                & .descripcion {
+                    height: 90px;
+                    width: 100%;
+                }
+    
+                & select {
+                    width: 50%;
+                    margin-top: 5px;
+    
+                    & option {
+                        background-color: $gray;
+                        font-size: 16px;
+                    }
+    
+                }
+            }
+
+            & .escala {
+                display: flex;
+                flex-direction: row;
+                & label {
+                    width: 5%;
+                    margin: 0 0 0 10%;
+                    padding: 0;
+                }
+                & .radio {
+                    width: 5%;
+                    margin: 0 0 0 20px;
+                }
+            }
+            
+            & div {
+                color: red;    
+            }
+
+            .enviar {
+                width: 20%;
+                margin-left: 40%;
+            }
+    
+            .agregar {
+                width: 100px;
+                margin-left: 40%;
+                margin-top: 20px;
+            }
+        }
+        
+    }
+    .principaln {
+        margin-bottom: 20%;
+    }
+    .principalh {
+
+        & main {
+            margin: 10%;
+        }
+    }
+}
+
+@media (min-width: 721px) { 
+    section {
+        margin: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        & article {
+            @include card2;
+        }
+    }
+
+    main {
+
+        & h2 {
+            font-family: 'Bitter', serif;
+            text-align: center;
+            font-size: 32px;
+        }
+    
+        & form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            
+            & label {
+                width: 400px;
+
+                & input {
+                    width: 400px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                & .descripcion {
+                    height: 150px;
+                    width: 100%;
+                }
+                
+                & select {
+                    width: 50%;
+                    margin-top: 5px;
+    
+                    & option {
+                        background-color: $gray;
+                        font-size: 16px;
+                    }
+    
+                }
+            }
+
+            & .escala {
+                display: flex;
+                flex-direction: row;
+                & label {
+                    width: 5%;
+                    margin: 0 0 0 50px;
+                    padding: 0;
+                }
+                & .radio {
+                    width: 5%;
+                    margin: 0 0 0 12px;
+                }
+            }
+
+            & div {
+                color: red;
+                text-align: center;
+                margin:0;
+                width: 100%;
+            }
+    
+            .enviar {
+                width: 130px;
+                margin-top: 20px;
+            }
+    
+            .agregar {
+                width: 130px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .principalc {
+        margin-top: 150px;
+        margin-bottom: 5%;
+        & p {
+            width: 50%;
+            font-family: 'Inter', sans-serif;
+            margin: 0 0 50px 25%;
+        }
+    }
+
+    .principala {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 5%;
+        & p {
+            width: 50%;
+            font-family: 'Inter', sans-serif;
+            margin: 0 0 50px 25%;
+        }
+    }
+
+    .principaln {
+        margin-top: 150px;
+        margin-bottom: 20%;
+        & p {
+            width: 60%;
+            font-family: 'Inter', sans-serif;
+            margin: 0 0 50px 20%;
+        }
+    }
+
+    .principalh {
+        margin: 150px 0 300px 0;
+    }
+
+}
