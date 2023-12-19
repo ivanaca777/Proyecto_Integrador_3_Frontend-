@@ -6,14 +6,19 @@ import { useCartContext } from '../../CartContext';
 const Card = () => {
   const [products, setProducts] = useState([]);
 
-  const { addToCart } = useCartContext()
+  const { addToCart } = useCartContext();
 
   useEffect(() => {
-    fetch('https://657b9eee394ca9e4af148a16.mockapi.io/api/Product')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data || []);
-      })
+    fetch("http://localhost:5000/api/productos") // Pide los datos de prodcutos al servidor Express en el puerto 5000 / Que luego el servidor envia por enrutador al controlador y metodo correspondiente
+    .then(response => {
+      if (!response.ok) { // Valida si la respuesta del servidor es correcta
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      setProducts(data || []);
+    })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
@@ -21,13 +26,13 @@ const Card = () => {
     <main>
       <section>
         {products.map(product => (
-          <article key={product.id}>
+          <article key={product._id}>
             <img src={product.imagen} alt={product.personaje} />
             <div>
               <h3>{`${product.personaje} - ${product.franquicia}`}</h3>
               <p className="datos">{`escala ${product.escala})`}</p>
               <p className="precio">{`$${product.precio || 0}`}</p>
-              <button className="boton" onClick={ () => addToCart(product)}>AGREGAR!</button>
+              <button className="boton" onClick={() => addToCart(product)}>AGREGAR!</button>
             </div>
           </article>
         ))}

@@ -149,7 +149,7 @@ const Alta = () => {
       try {
         // agrega el producto a mockapi
         const response = await fetch(
-          'https://657b9eee394ca9e4af148a16.mockapi.io/api/Product/',
+          'http://localhost:5000/api/productos',
           {
             method: 'POST',
             headers: {

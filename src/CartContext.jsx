@@ -26,11 +26,11 @@ export const CartContextProvider = ({ children }) => {
   };
 
   const addToCart = (product) => {
-    const isProductInCart = allProducts.some((item) => item.id === product.id);
+    const isProductInCart = allProducts.some((item) => item._id === product._id);
 
     if (isProductInCart) {
       const updatedProducts = allProducts.map((item) =>
-        item.id === product.id
+        item._id === product._id
           ? { ...item, quantity: item.quantity + 1, total: (item.quantity + 1) * item.precio, subtotal: (item.quantity + 1) * item.precio }
           : item
       );
@@ -63,7 +63,7 @@ export const CartContextProvider = ({ children }) => {
 
   const removeFormCart = (productId) => {
     const updatedCart = allProducts.map((productCard) =>
-      productCard.id === productId
+      productCard._id === productId
         ? {
             ...productCard,
             quantity: productCard.quantity > 1 ? productCard.quantity - 1 : 0,
